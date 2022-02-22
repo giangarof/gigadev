@@ -1,6 +1,7 @@
 body {
   margin: 0;
   color: #494949;
+  font-family: 'Roboto', sans-serif;
 }
 
 header {
@@ -108,6 +109,40 @@ main .portofolio {
           justify-content: space-evenly;
 }
 
+section {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(green), to(#91ff00));
+  background-image: linear-gradient(to left top, green, #91ff00);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+}
+
+section .skills {
+  width: 90%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+section .skills i {
+  font-size: 4rem;
+}
+
+section .skills i:hover {
+  color: white;
+}
+
 footer {
   background-color: #333;
   color: white;
@@ -121,5 +156,6 @@ footer {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  letter-spacing: 1.5px;
 }
 /*# sourceMappingURL=style.css.map */
