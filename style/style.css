@@ -277,4 +277,120 @@ footer {
           justify-content: center;
   letter-spacing: 1.5px;
 }
+
+@media (max-width: 764px) {
+  * {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+  }
+  header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  header .main-container {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .main-container .main1 {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  header .main-container .main2 {
+    width: 95%;
+  }
+  header .main-container .main2 .info {
+    width: 100%;
+    text-align: center;
+    -ms-flex-line-pack: center;
+        align-content: center;
+  }
+  main {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main h2 {
+    width: 100%;
+    margin: 15px 0 15px 0;
+    padding: 0 15px 0 15px;
+    text-align: center;
+  }
+  main .portofolio {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 12px;
+    width: 90%;
+  }
+  main .portofolio article {
+    width: 100%;
+  }
+  main .portofolio article .card {
+    width: 100%;
+  }
+  main .portofolio article .card .inner {
+    width: 100%;
+  }
+  main .portofolio article .card .inner .back {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 30px;
+  }
+  main .portofolio article .card .inner .back .text {
+    text-align: center;
+    width: 100%;
+  }
+  section {
+    width: 100%;
+  }
+  section .skills {
+    width: 90%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (2fr)[2];
+        grid-template-columns: repeat(2, 2fr);
+    gap: 15px;
+  }
+  section .skills i {
+    font-size: 40px;
+  }
+  section .skills i p {
+    padding: 5px;
+  }
+  footer {
+    width: 100%;
+    padding: 20px;
+  }
+}
 /*# sourceMappingURL=style.css.map */
