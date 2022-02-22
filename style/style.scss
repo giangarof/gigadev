@@ -1,5 +1,6 @@
 $primary: linear-gradient(to left top, green, rgb(145, 255, 0)); 
 $background: #333;
+
 body{
     margin: 0;
     color: rgb(73, 73, 73);
@@ -13,8 +14,9 @@ header{
         display: flex;
         flex-direction: row;
         padding-top: 50px;
+        padding-bottom: 20px;
         width: 100%;
-        height: 70vh;
+        height: 80%;
         .main1{
             text-align: center;
             align-content: center;
@@ -32,8 +34,9 @@ header{
                 display: flex;
                 flex-direction: row;
                 justify-content: space-evenly;
-
+                a{color: inherit;}
                 i{
+                    cursor: pointer;
                     text-align: center;
                     padding-top: 20px;
                     font-size: 2rem;
@@ -48,9 +51,12 @@ header{
         }
         .main2{
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 1rem;
             width: 50%;
             .info{
+                border-radius: 1.5rem;
+                background-color: white;
+                padding: 1rem;
                 width: 90%;
             }
         }
@@ -58,6 +64,7 @@ header{
 }
 
 main{
+    letter-spacing: 1.5px;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -83,7 +90,12 @@ section{
         display: flex;
         justify-content: space-evenly;
         i{
-            font-size: 4rem;
+            font-size: 3.5rem;
+            text-align: center;
+            letter-spacing: 1px;
+            p{
+                font-size: 0.8rem;
+            }
             &:hover{
                 color: white;
             }
