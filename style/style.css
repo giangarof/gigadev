@@ -1,4 +1,5 @@
 body {
+  padding: 0;
   margin: 0;
   color: #494949;
   font-family: 'Roboto', sans-serif;
@@ -103,10 +104,12 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 20px;
 }
 
 main .portofolio {
   width: 100%;
+  height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -117,6 +120,106 @@ main .portofolio {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+main .portofolio article {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+}
+
+main .portofolio article .card {
+  text-align: center;
+  padding: 0px;
+  width: 200px;
+  height: 200px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  margin: auto;
+  border-radius: 10px;
+  color: #fff;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(green), color-stop(60%, rgba(53, 160, 21, 0.432)));
+  background-image: linear-gradient(to left top, green, rgba(53, 160, 21, 0.432) 60%);
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+main .portofolio article .card:hover {
+  -webkit-transform: rotateX(-180deg);
+          transform: rotateX(-180deg);
+}
+
+main .portofolio article .card .inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  text-align: center;
+  border-radius: 10px;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+main .portofolio article .card .inner .front, main .portofolio article .card .inner .back {
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+main .portofolio article .card .inner .front h3, main .portofolio article .card .inner .back h3 {
+  padding: 3px;
+}
+
+main .portofolio article .card .inner .front {
+  background-image: url("/Reservia.png");
+  background-size: 150px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+main .portofolio article .card .inner .one {
+  background-image: url("/img3.png");
+}
+
+main .portofolio article .card .inner .two {
+  background-image: url("/img4.png");
+}
+
+main .portofolio article .card .inner .back {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(green), color-stop(60%, rgba(53, 160, 21, 0.432)));
+  background-image: linear-gradient(to left top, green, rgba(53, 160, 21, 0.432) 60%);
+  position: absolute;
+  border-radius: 10px;
+  -webkit-transform: rotateX(180deg);
+          transform: rotateX(180deg);
+}
+
+main .portofolio article .card .inner .back p {
+  width: 90%;
+  margin-top: 40px;
+  display: inline-block;
+  color: #fff;
 }
 
 section {
