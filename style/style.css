@@ -7,11 +7,11 @@ body {
 
 header {
   width: 100%;
-  background-image: -webkit-gradient(linear, right bottom, left top, from(green), to(#91ff00));
-  background-image: linear-gradient(to left top, green, #91ff00);
 }
 
 header .main-container {
+  background-image: -webkit-gradient(linear, right bottom, left top, from(green), to(#91ff00));
+  background-image: linear-gradient(to left top, green, #91ff00);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

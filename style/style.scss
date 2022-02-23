@@ -11,8 +11,8 @@ body{
 
 header{
     width: 100%;
-    background-image: $primary;
     .main-container{
+        background-image: $primary;
         display: flex;
         flex-direction: row;
         padding-top: 50px;
