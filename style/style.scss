@@ -26,6 +26,7 @@ header{
             width: 60%;
             img{
                 border-radius: 70% 0 70% 0;
+                box-shadow: 0 0 20px 0;
                 opacity: 0.9;
                 &:hover{
                     transition: 0.4s ease-in-out ;
@@ -58,6 +59,7 @@ header{
             width: 70%;
             .info{
                 border-radius: 1.5rem;
+                box-shadow: 0 0 20px 0;
                 background-color: white;
                 padding: 1rem;
                 width: 90%;
@@ -286,7 +288,11 @@ article{
                 outline: none;
                 border: none;
             }
-            #btn{
+            button{
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                width: 100%;
                 height: 3rem;
                 font-size: 1.3rem;
                 background-image: $primary;

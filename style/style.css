@@ -36,6 +36,8 @@ header .main-container .main1 {
 
 header .main-container .main1 img {
   border-radius: 70% 0 70% 0;
+  -webkit-box-shadow: 0 0 20px 0;
+          box-shadow: 0 0 20px 0;
   opacity: 0.9;
 }
 
@@ -85,6 +87,8 @@ header .main-container .main2 {
 
 header .main-container .main2 .info {
   border-radius: 1.5rem;
+  -webkit-box-shadow: 0 0 20px 0;
+          box-shadow: 0 0 20px 0;
   background-color: white;
   padding: 1rem;
   width: 90%;
@@ -452,7 +456,11 @@ article aside form #message {
   border: none;
 }
 
-article aside form #btn {
+article aside form button {
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  width: 100%;
   height: 3rem;
   font-size: 1.3rem;
   background-image: -webkit-gradient(linear, right bottom, left top, from(green), to(#91ff00));
@@ -463,7 +471,7 @@ article aside form #btn {
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-article aside form #btn:hover {
+article aside form button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
