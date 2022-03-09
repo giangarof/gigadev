@@ -294,6 +294,86 @@ article #left {
           align-items: center;
 }
 
+article #left .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 250px;
+  height: 320px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 0 20px 0;
+          box-shadow: 0 0 20px 0;
+  border-radius: 20px;
+  opacity: 0.8;
+  -webkit-transition: -webkit-transform all ease-in-out;
+  transition: -webkit-transform all ease-in-out;
+  transition: transform all ease-in-out;
+  transition: transform all ease-in-out, -webkit-transform all ease-in-out;
+}
+
+article #left .box:hover {
+  opacity: 0.9;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+article #left .box:hover .icons {
+  -webkit-transform: translateY(-140px);
+          transform: translateY(-140px);
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+  background-color: rgba(131, 126, 120, 0.712);
+}
+
+article #left .box .iconsBox {
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2.3rem;
+  padding: 10px;
+  margin-top: 5px;
+}
+
+article #left .box .connect {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+article #left .box .connect p {
+  margin: 5px;
+}
+
 article aside {
   width: 40%;
   display: -webkit-box;
