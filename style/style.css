@@ -1,6 +1,8 @@
 body {
   padding: 0;
   margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #494949;
   font-family: 'Roboto', sans-serif;
 }
@@ -260,6 +262,118 @@ section .skills i p {
 
 section .skills i:hover {
   color: white;
+}
+
+article {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 25px 0  25px 0;
+}
+
+article #left {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+article aside {
+  width: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+article aside form {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border: 3px solid;
+  -o-border-image: linear-gradient(to left top, green, #91ff00) 1;
+     border-image: -webkit-gradient(linear, right bottom, left top, from(green), to(#91ff00)) 1;
+     border-image: linear-gradient(to left top, green, #91ff00) 1;
+  text-align: start;
+  gap: 8px;
+  padding: 10px;
+  display: flex;
+}
+
+article aside form label {
+  background-color: #fff;
+  z-index: 1;
+  font-size: 18px;
+  padding: 7px;
+  border-radius: 20px;
+  margin: 0 0 -20px 0;
+}
+
+article aside form input {
+  cursor: pointer;
+  height: 35px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background-color: #f1e8e8;
+  padding: 5px;
+  font-size: 1rem;
+}
+
+article aside form #message {
+  cursor: pointer;
+  background-color: #f1e8e8;
+  width: 100%;
+  height: 8rem;
+  border-radius: 10px;
+  outline: none;
+  border: none;
+}
+
+article aside form #btn {
+  height: 3rem;
+  font-size: 1.3rem;
+  background-image: -webkit-gradient(linear, right bottom, left top, from(green), to(#91ff00));
+  background-image: linear-gradient(to left top, green, #91ff00);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+article aside form #btn:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
 }
 
 footer {

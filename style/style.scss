@@ -5,6 +5,7 @@ $images: linear-gradient(to left top, green, rgba(53, 160, 21, 0.432) 60%);
 body{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
     color: rgb(73, 73, 73);
     font-family: 'Roboto', sans-serif;
 }
@@ -172,6 +173,80 @@ section{
             }
         }
     }    
+}
+
+article{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 25px 0  25px 0 ;
+    #left{
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+    }
+    aside{
+        width: 40%;
+        display: flex;
+        justify-content: center;
+            form{
+                width: 80%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                border: 3px solid;
+                border-image: $primary 1;
+                text-align: start;
+                gap: 8px;
+                padding: 10px;
+                display: flex;                
+                
+            label{
+                background-color: #fff;
+                z-index: 1;
+                font-size: 18px;
+                padding: 7px;
+                border-radius: 20px;
+                margin: 0 0 -20px 0;
+                }
+            input{
+                cursor: pointer;
+                height: 35px;
+                width: 100%;
+                border: none;
+                outline: none;
+                border-radius: 10px;
+                background-color: rgb(241, 232, 232);
+                padding: 5px;
+                font-size: 1rem;
+                }
+            #message{
+                cursor: pointer;
+                background-color: rgb(241, 232, 232);
+                width: 100%;
+                height: 8rem;
+                border-radius: 10px;
+                outline: none;
+                border: none;
+            }
+            #btn{
+                height: 3rem;
+                font-size: 1.3rem;
+                background-image: $primary;
+                transition: transform 0.5s ease-in-out;
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+        
+    }
 }
 
 footer{
