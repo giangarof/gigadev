@@ -116,16 +116,10 @@ main {
 main .portofolio {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
 }
 
 main .portofolio article {
@@ -210,6 +204,10 @@ main .portofolio article .card .inner .one {
 
 main .portofolio article .card .inner .two {
   background-image: url("/img4.png");
+}
+
+main .portofolio article .card .inner .three {
+  background-image: url("movie.png");
 }
 
 main .portofolio article .card .inner .back {
@@ -584,6 +582,9 @@ footer {
   main .portofolio article .card .inner .back .text {
     text-align: center;
     width: 100%;
+  }
+  main .portofolio article .card .inner .back i {
+    font-size: 30px;
   }
   section {
     width: 100%;
