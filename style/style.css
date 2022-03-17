@@ -207,7 +207,11 @@ main .portofolio article .card .inner .two {
 }
 
 main .portofolio article .card .inner .three {
-  background-image: url("movie.png");
+  background-image: url("/movie.png");
+}
+
+main .portofolio article .card .inner .four {
+  background-image: url("/rgbgame.png");
 }
 
 main .portofolio article .card .inner .back {

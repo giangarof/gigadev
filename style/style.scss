@@ -137,7 +137,10 @@ main{
                         background-image: url('/img4.png');
                     }
                     .three{
-                        background-image: url('movie.png');
+                        background-image: url('/movie.png');
+                    }
+                    .four{
+                        background-image: url('/rgbgame.png');
                     }
                     .back{
                         background-image: $images;
