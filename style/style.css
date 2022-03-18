@@ -214,6 +214,10 @@ main .portofolio article .card .inner .four {
   background-image: url("/rgbgame.png");
 }
 
+main .portofolio article .card .inner .five {
+  background-image: url("/weather.png");
+}
+
 main .portofolio article .card .inner .back {
   background-image: -webkit-gradient(linear, right bottom, left top, from(green), color-stop(60%, rgba(53, 160, 21, 0.432)));
   background-image: linear-gradient(to left top, green, rgba(53, 160, 21, 0.432) 60%);
@@ -228,6 +232,10 @@ main .portofolio article .card .inner .back p {
   margin-top: 40px;
   display: inline-block;
   color: #fff;
+}
+
+main .portofolio article .card .inner .back .fa-link {
+  font-size: 1.5rem;
 }
 
 section {

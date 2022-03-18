@@ -142,6 +142,9 @@ main{
                     .four{
                         background-image: url('/rgbgame.png');
                     }
+                    .five{
+                        background-image: url('/weather.png');
+                    }
                     .back{
                         background-image: $images;
                         position: absolute;
@@ -152,6 +155,9 @@ main{
                             margin-top: 40px;
                             display: inline-block;
                             color: #fff;
+                        }
+                        .fa-link{
+                            font-size: 1.5rem;
                         }
                     }
                 }
