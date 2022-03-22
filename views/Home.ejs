@@ -16,19 +16,40 @@
     <header>
         <div class="main-container">
             <div class="main1">
-                <img src="/img.jpg %>" width="250px" alt="">
                 <div class="links">
                     <a href="https://github.com/giangarof98"> <i class="fa-brands fa-github" ></i> </a>
                     <a href="https://www.linkedin.com/in/gianmarco-garofalo/"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="https://www.instagram.com/iam_mapkyc/"><i class="fa-brands fa-instagram"></i></a>
                 </div>
+                <img src="/img.jpg %>" width="250px" alt="">
+                <div class="about">
+                    <button class="about-modal">About me!</button>
+                </div>
             </div>
             <div class="main2">
                 <div class="info">
-                    <h1>Hi there!</h1> <br>
-                    <p>I'm Gianmarco && I'm web developer.</p> <br>
-                    <p>Discovered coding from my brother. I decided to give it a test drive which turned into a passion for converting data to a graphical interface and ultimately providing high-quality websites.</p> <br>
-                    <p>Recently graduated with a web development associate degree. Enthusiastic about how the web works and all the software technologies that include the front-end and back-end environment.</p>
+                    <div class="modal">
+                        <div class="modal-header">
+                            <h1>Hi there!</h1> 
+                            <span id="close">X</span>
+                        </div>
+                        <p>I'm Gianmarco && I'm web developer.</p> 
+                        
+                        <p>Discovered coding from my brother. I decided to give it a 
+                            test drive which turned into a passion for converting 
+                            data to a graphical interface and ultimately providing 
+                            high-quality websites.</p> 
+                            
+                        <p>Recently graduated with a web development associate degree. 
+                            Enthusiastic about how the web works and all the software 
+                            technologies that include the front-end and back-end environment.</p>
+                        <p>My services include: 
+                            <ul>
+                                <li>Build and develop your website</li>
+                                <li>Optimize your web content</li>
+                            </ul> 
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -194,5 +215,17 @@
     <footer>
         <p>Copyright <i class="fa-solid fa-copyright"></i> 2022</p>
     </footer>
+
+    <script>
+        const btn = document.querySelector('.about-modal');
+        const modal = document.querySelector('.modal');
+        const close = document.getElementById('close')
+        btn.addEventListener('click', function() {
+            modal.style.display = 'block'
+        })
+        close.addEventListener('click', function(e){
+            modal.close(modal.style.display = 'none')
+        })
+    </script>
 </body>
 </html>
