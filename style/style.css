@@ -122,7 +122,6 @@ header .main-container .main1 .about .about-modal:hover {
 header .main-container .main2 {
   position: absolute;
   width: 100%;
-  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,6 +151,10 @@ header .main-container .main2 .info .modal {
   width: 100%;
 }
 
+header .main-container .main2 .info .modal .p-center {
+  text-align: center;
+}
+
 header .main-container .main2 .info .modal .modal-header {
   width: 100%;
   margin-right: 0;
@@ -174,6 +177,17 @@ header .main-container .main2 .info .modal .modal-header span {
   font-size: x-large;
   font-weight: 700;
   cursor: pointer;
+}
+
+header .main-container .main2 .info .modal .service {
+  width: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header .main-container .main2 .info .modal .service ul li {
+  list-style-type: none;
 }
 
 main {
