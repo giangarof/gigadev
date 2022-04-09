@@ -23,7 +23,6 @@ header .main-container {
           flex-direction: row;
   padding-top: 50px;
   padding-bottom: 20px;
-  width: 100%;
   height: 80%;
 }
 
@@ -83,10 +82,26 @@ header .main-container .main1 .links i {
 header .main-container .main1 .links i:hover {
   -webkit-transition: 0.44s ease-in-out;
   transition: 0.44s ease-in-out;
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
   color: white;
 }
 
-header .main-container .main1 .about {
+header .main-container .main1 .btn-modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+header .main-container .main1 .btn-modal .about {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -100,7 +115,7 @@ header .main-container .main1 .about {
   margin-left: 1rem;
 }
 
-header .main-container .main1 .about .about-modal {
+header .main-container .main1 .btn-modal .about .about-modal {
   width: 100%;
   padding: 10px;
   font-size: x-large;
@@ -114,7 +129,7 @@ header .main-container .main1 .about .about-modal {
           transform: scale(1);
 }
 
-header .main-container .main1 .about .about-modal:hover {
+header .main-container .main1 .btn-modal .about .about-modal:hover {
   -webkit-transform: scale(1.2);
           transform: scale(1.2);
 }
@@ -141,14 +156,14 @@ header .main-container .main2 .info {
 }
 
 header .main-container .main2 .info .modal {
+  width: 100%;
   display: none;
   font-size: large;
   border-radius: 1.5rem;
   -webkit-box-shadow: 0 0 20px 0;
           box-shadow: 0 0 20px 0;
   background-color: rgba(255, 255, 255, 0.945);
-  padding: 1.1rem;
-  width: 100%;
+  padding: 1.4rem;
   text-align: center;
 }
 
@@ -163,15 +178,32 @@ header .main-container .main2 .info .modal .p-center {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  width: 100%;
+  margin: 0;
 }
 
 header .main-container .main2 .info .modal .p-center ul {
-  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 5vh;
   padding: 0;
   width: 100%;
+  height: 100%;
+  text-align: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 header .main-container .main2 .info .modal .p-center ul li {
+  padding: 5px;
   list-style-type: none;
 }
 
@@ -673,23 +705,34 @@ footer {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    margin-top: 5vh;
   }
-  header .main-container .main1 .about {
-    width: 80%;
+  header .main-container .main1 .btn-modal {
+    margin: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    width: 50%;
+    align-content: center;
+  }
+  header .main-container .main1 .btn-modal .about {
+    width: 100%;
     padding: 0;
     margin: 0;
   }
-  header .main-container .main1 .about button {
+  header .main-container .main1 .btn-modal .about button {
     width: 100%;
     margin-top: 20px;
   }
   header .main-container .main2 {
-    width: 90%;
+    width: 80%;
     height: 50%;
   }
   header .main-container .main2 .info {
     width: 100%;
-    height: 100%;
   }
   header .main-container .main2 .info .modal .p-center {
     height: 100%;

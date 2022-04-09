@@ -22,8 +22,13 @@
                     <a href="https://www.instagram.com/iam_mapkyc/"><i class="fa-brands fa-instagram"></i></a>
                 </div>
                 <img src="/img.jpg %>" width="250px" alt="">
-                <div class="about">
-                    <button class="about-modal">About me!</button>
+                <div class="btn-modal">
+                    <div class="about">
+                        <button class="about-modal">About me!</button>
+                    </div>
+                    <div class="about">
+                        <button class="about-modal" id="service" >Service</button>
+                    </div>
                 </div>
             </div>
             <div class="main2">
@@ -31,24 +36,32 @@
                     <div class="modal">
                         <div class="modal-header">
                             <h1>Hi there!</h1> 
-                            <span id="close">X</span>
+                            <span class="close">X</span>
                         </div>
                         <div class="p-center">
                             <p>I'm Gianmarco && I'm web developer.</p> 
-                            <p>Discovered coding from my brother. I decided to give it a 
-                                test drive which turned into a passion for converting 
-                                data to a graphical interface and ultimately providing 
-                                high-quality websites.</p> 
-                            <p>Recently graduated with a web development associate degree. 
-                                Enthusiastic about how the web works and all the software 
-                                technologies that include the front-end and back-end environment.</p>
-                            <p>My services include: </p>
+                            <p>Recently graduated with a Web Development associated degree. 
+                                I'm focus into front-end and back-end technologies, such MERN & and MEVN stack, 
+                                but not limited to others technologies. Also I like to build in plain vanilla Javascript.</p> 
+                            <p>Through the years i was able to develop a passion for programming, 
+                                to make websites 100% functional and friendly for the user.  </p>
+                            
+                        </div>
+                    </div>
+                    <div class="modal" id="modal-service">
+                        <div class="modal-header">
+                            <h1>My services</h1> 
+                            <span class="close-service">X</span>
+                        </div>
+                        <div class="p-center">
                             <ul>
                                 <li>Build and develop your website</li>
                                 <li>UI/UX Design</li>
-                                <li>Optimize your web content</li>
+                                <li>Develop a responsive web content</li>
+                                <li>Optimize your existing website</li>
                                 <li>Provide your website with SEO best practices</li>
-                            </ul>
+                                <li>Make secure your web content</li>
+                            </ul> 
                         </div>
                     </div>
                 </div>
@@ -69,7 +82,7 @@
                         </div>
                         <div class="back">
                             <div class="text">
-                                <p>Design based in Airbnd where users can travel and choose destination</p>
+                                <p>Mockup inspired in airbnd; Html, Css</p>
                             </div>
                             <a href="https://giangarof98.github.io/reserviaMockup/"><i class="fa-solid fa-link"></i></a>
                         </div>
@@ -84,7 +97,7 @@
                         </div>
                         <div class="back">
                             <div class="text">
-                                <p>Design based in restaurant menu where users can select a restaurant and dishes</p>
+                                <p>Fancy Restaurant Mockup; Html, Css, Sass</p>
                             </div>
                             <a href="https://giangarof98.github.io/ohmyfood/"><i class="fa-solid fa-link"></i></a>
                         </div>
@@ -99,7 +112,7 @@
                         </div>
                         <div class="back">
                             <div class="text">
-                                <p>Full stack solution where users can join and create publications.</p>
+                                <p>Social media; Html, Css, Javascript, Node, MongoDB, Heroku</p>
                             </div>
                             <a href="https://shareforce.herokuapp.com/login"><i class="fa-solid fa-link"></i></a>
                         </div>
@@ -114,7 +127,7 @@
                         </div>
                         <div class="back">
                             <div class="text">
-                                <p>Movie Comparision. Wrote with Javascript, styled with bulma framework and used imdb API</p>
+                                <p>Movie Comparision; Javascript, Bulma framework, API</p>
                             </div>
                             <a href="https://giangarof98.github.io/movieapi/"><i class="fa-solid fa-link"></i></a>
                         </div>
@@ -129,7 +142,7 @@
                         </div>
                         <div class="back">
                             <div class="text">
-                                <p>RGB Color game, guess the right color in three differents levels.</p>
+                                <p>RGB Color game; Html, Css, Javascript</p>
                             </div>
                             <a href="https://giangarof98.github.io/rgbgame/"><i class="fa-solid fa-link"></i></a>
                         </div>
@@ -144,7 +157,7 @@
                         </div>
                         <div class="back">
                             <div class="text">
-                                <p>Weather App built in Vue.js. API from OpenWeatherMap</p>
+                                <p>Weather App built in Vue.js. Javascript, Vue, API</p>
                             </div>
                             <a href="https://weather-weld.vercel.app/"><i class="fa-solid fa-link"></i></a>
                         </div>
@@ -218,15 +231,48 @@
     </footer>
 
     <script>
-        const btn = document.querySelector('.about-modal');
+        //about me popup
+        const btnAbout = document.querySelector('.about-modal');
         const modal = document.querySelector('.modal');
-        const close = document.getElementById('close')
-        btn.addEventListener('click', function() {
-            modal.style.display = 'block'
+        const closeAbout = document.querySelector('.close');
+        const main2 = document.querySelector('.main2');
+        const body = document.getElementsByName('body')
+
+        //service popup
+        const serviceBtn = document.getElementById('service');
+        const modalService = document.getElementById('modal-service');
+        const closeService = document.querySelector('.close-service')
+
+        serviceBtn.addEventListener('click', function(){
+            modal.style.display = 'none';
+            modalService.style.display = 'block';
         })
-        close.addEventListener('click', function(e){
-            modal.close(modal.style.display = 'none')
+
+        closeService.addEventListener('click', function(){
+            modalService.style.display = 'none';
         })
+
+        btnAbout.addEventListener('click', function() {
+            modal.style.display = 'block';
+            modalService.style.display = 'none';
+
+        })
+
+        closeAbout.addEventListener('click', function(e){
+            modal.style.display = 'none';
+        })
+
+        window.onclick = function(e){
+            
+            if(e.target === main2){
+                modal.style.display = 'none'
+            }
+            if (e.target === main2){
+                modalService.style.display = 'none'
+            }
+        }
+
+
     </script>
 </body>
 </html>
