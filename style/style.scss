@@ -162,84 +162,24 @@ main{
         height: 100%;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        // flex-direction: row;
-        // justify-content: space-evenly;
         article{
             cursor: pointer;
             display: flex;
             align-items: center;
             overflow: hidden;
             .card{
-                text-align: center;
-                padding: 0px;
-                width: 200px;
-                height: 200px;
-                perspective: 1000px;
-                margin: auto;
-                border-radius: 10px;
-                color: #fff;
+                width: 300px;
+                padding: 0 0 0 10px;
                 background-image: $images;
-                transition: transform 1s;
-                    transform-style: preserve-3d;
-                    &:hover{
-                        transform: rotateX(-180deg);
-                    }
-                .inner{
-                    display: flex;
-                    justify-content: center;
-                    width: 100%;
-                    height: 100%;
-                    position: relative;
+                border-radius: 20px;
+                h2{
                     text-align: center;
-                    border-radius: 10px;
-                    transition: transform 1s;
-                    transform-style: preserve-3d;
-                    .front, .back{
-                        border-radius: 10px;
-                        width: 100%;
-                        height: 100%;
-                        position: absolute;
-                        backface-visibility: hidden;
-                        h3{
-                            padding: 3px;
-                        }
-                    }
-                    .front{
-                        background-image: url('/Reservia.png');
-                        background-size: 150px;
-                        background-repeat: no-repeat;
-                        background-position: center;
-                    }
-                    .one{
-                        background-image: url('/img3.png');
-                    }
-                    .two{
-                        background-image: url('/img4.png');
-                    }
-                    .three{
-                        background-image: url('/movie.png');
-                    }
-                    .four{
-                        background-image: url('/rgbgame.png');
-                    }
-                    .five{
-                        background-image: url('/weather.png');
-                    }
-                    .back{
-                        background-image: $images;
-                        position: absolute;
-                        border-radius: 10px;
-                        transform: rotateX(180deg);
-                        p{
-                            width: 90%;
-                            margin-top: 40px;
-                            display: inline-block;
-                            color: #fff;
-                        }
-                        .fa-link{
-                            font-size: 1.5rem;
-                        }
-                    }
+                    color: #fff;
+                }
+                .link{
+                    text-align: center;
+                    font-size: 1.8rem;
+                    margin: 0 0 1rem 0;
                 }
             }
         }
@@ -273,74 +213,19 @@ section{
 article{
     width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     padding: 25px 0  25px 0 ;
-    #left{
-        width: 60%;
+    #article{
+        width: 100%;
         display: flex;
         flex-direction: column;
         text-align: center;
         align-items: center;
-        .box{
-            display: flex;
-            flex-direction: column;
-            width: 250px;
-            height: 320px;
-            overflow: hidden;
-            box-shadow: 0 0 20px 0;
-            border-radius: 20px;
-            opacity: 0.8;
-            transition: transform all ease-in-out;
-            &:hover{
-                opacity: 0.9;
-                transition: all 1s ease-in-out;
-                transform: scale(1.1);
-            }
-            &:hover .icons {
-                transform: translateY(-140px);
-                transition-duration: 1s;
-                background-color: rgba(49, 46, 42, 0.712);
-            }
-            .iconsBox{
-                color: #fff;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                text-align: center;
-                align-items: center;
-                font-size: 2.3rem;
-                padding: 10px;
-                margin-top: 5px;
-                a{
-                    color: inherit;
-                    &:hover{
-                        color: green;
-                        transform: scale(1.4);
-                    }
-                }
-            }
-            .connect {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-content: center;
-                align-items: center;
-                color: #fff;
-                padding: 10px;
-                margin-left: 10px;
-                p{
-                    margin: 5px;
-                }
-            }
-        }
-    }
-    aside{
-        width: 40%;
-        display: flex;
-        justify-content: center;
+        .contact{
+            width: 30%;
             form{
-                width: 80%;
+                width: 100%;
                 display: flex;
                 flex-direction: column;
                 justify-content: center;
@@ -353,49 +238,50 @@ article{
                 padding: 10px;
                 display: flex;
 
-            label{
-                background-color: #fff;
-                z-index: 1;
-                font-size: 18px;
-                padding: 7px;
-                border-radius: 20px;
-                margin: 0 0 -20px 0;
+                label{
+                    background-color: #fff;
+                    z-index: 1;
+                    font-size: 18px;
+                    padding: 7px;
+                    border-radius: 20px;
+                    margin: 0 0 -20px 0;
                 }
-            input{
-                cursor: pointer;
-                height: 35px;
-                width: 100%;
-                border: none;
-                outline: none;
-                border-radius: 10px;
-                background-color: rgb(241, 232, 232);
-                padding: 5px;
-                font-size: 1rem;
+                input{
+                    cursor: pointer;
+                    height: 35px;
+                    width: 100%;
+                    border: none;
+                    outline: none;
+                    border-radius: 10px;
+                    background-color: rgb(241, 232, 232);
+                    padding: 5px;
+                    font-size: 1rem;
                 }
-            #message{
-                cursor: pointer;
-                background-color: rgb(241, 232, 232);
-                width: 100%;
-                height: 8rem;
-                border-radius: 10px;
-                outline: none;
-                border: none;
-            }
-            button{
-                border: none;
-                outline: none;
-                border-radius: 10px;
-                width: 100%;
-                height: 3rem;
-                font-size: 1.3rem;
-                background-image: $primary;
-                transition: transform 0.5s ease-in-out;
-                &:hover{
-                    transform: scale(1.05);
+                #message{
+                    cursor: pointer;
+                    background-color: rgb(241, 232, 232);
+                    width: 100%;
+                    height: 8rem;
+                    border-radius: 10px;
+                    outline: none;
+                    border: none;
+                }
+                button{
+                    border: none;
+                    outline: none;
+                    border-radius: 10px;
+                    width: 100%;
+                    height: 3rem;
+                    font-size: 1.3rem;
+                    background-image: $primary;
+                    transition: transform 0.5s ease-in-out;
+                    &:hover{
+                        transform: scale(1.05);
+                    }
                 }
             }
         }
-
+        
     }
 }
 
@@ -408,7 +294,26 @@ footer{
     letter-spacing: 1.5px;
 }
 
-@media (max-width: 764px){
+@media (min-width:770px) and (max-width: 1200px){
+    main{
+        // letter-spacing: 1.5px;
+        // width: 100%;
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: center;
+        // align-items: center;
+        // margin-bottom: 20px;
+    
+        .portofolio{
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+}
+
+@media (max-width: 770px){
     *{
         box-sizing: border-box;
         padding: 0;
@@ -499,31 +404,20 @@ footer{
             display: flex;
             flex-direction: column;
             gap: 12px;
-            width: 90%;
+            width: 100%;
             article{
                 width: 100%;
                 .card{
-                    width: 100%;
-                    .inner{
-                        width: 100%;
-                        .back{
-                            width: 100%;
-                            display: flex;
-                            flex-direction: column;
-                            gap: 30px;
-                            .text{
-                                text-align: center;
-
-                                width: 100%;
-
-                            }
-                            i{
-                                font-size: 30px;
-                            }
-                        }
+                    width: 90%;
+                    padding: 10px;
+                    h3, h4{
+                        padding: 1rem 0 1rem 1rem;
+                        
                     }
+                    
                 }
             }
+            
         }
     }
 
@@ -547,23 +441,19 @@ footer{
         width: 100%;
         display: flex;
         flex-direction: column;
-        #left{
+        #article{
             width: 100%;
-            margin: 0 0 30px 0;
             .header{
-                padding: 20px;
+                margin: 0 0 2rem 0;
                 h2{
-                    padding: 10px;
+                    margin: 0 0 1rem 0;
                 }
             }
-            
-        }
-        aside{
-            width: 100%;
-            textarea{
-                padding: 15px;
+            .contact{
+                width: 75%;
             }
         }
+
     }
 
     footer{

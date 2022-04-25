@@ -271,108 +271,22 @@ main .portofolio article {
 }
 
 main .portofolio article .card {
-  text-align: center;
-  padding: 0px;
-  width: 200px;
-  height: 200px;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  margin: auto;
-  border-radius: 10px;
-  color: #fff;
+  width: 300px;
+  padding: 0 0 0 10px;
   background-image: -webkit-gradient(linear, right bottom, left top, from(green), color-stop(60%, rgba(53, 160, 21, 0.432)));
   background-image: linear-gradient(to left top, green, rgba(53, 160, 21, 0.432) 60%);
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
+  border-radius: 20px;
 }
 
-main .portofolio article .card:hover {
-  -webkit-transform: rotateX(-180deg);
-          transform: rotateX(-180deg);
-}
-
-main .portofolio article .card .inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  height: 100%;
-  position: relative;
+main .portofolio article .card h2 {
   text-align: center;
-  border-radius: 10px;
-  -webkit-transition: -webkit-transform 1s;
-  transition: -webkit-transform 1s;
-  transition: transform 1s;
-  transition: transform 1s, -webkit-transform 1s;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-main .portofolio article .card .inner .front, main .portofolio article .card .inner .back {
-  border-radius: 10px;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-}
-
-main .portofolio article .card .inner .front h3, main .portofolio article .card .inner .back h3 {
-  padding: 3px;
-}
-
-main .portofolio article .card .inner .front {
-  background-image: url("/Reservia.png");
-  background-size: 150px;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-main .portofolio article .card .inner .one {
-  background-image: url("/img3.png");
-}
-
-main .portofolio article .card .inner .two {
-  background-image: url("/img4.png");
-}
-
-main .portofolio article .card .inner .three {
-  background-image: url("/movie.png");
-}
-
-main .portofolio article .card .inner .four {
-  background-image: url("/rgbgame.png");
-}
-
-main .portofolio article .card .inner .five {
-  background-image: url("/weather.png");
-}
-
-main .portofolio article .card .inner .back {
-  background-image: -webkit-gradient(linear, right bottom, left top, from(green), color-stop(60%, rgba(53, 160, 21, 0.432)));
-  background-image: linear-gradient(to left top, green, rgba(53, 160, 21, 0.432) 60%);
-  position: absolute;
-  border-radius: 10px;
-  -webkit-transform: rotateX(180deg);
-          transform: rotateX(180deg);
-}
-
-main .portofolio article .card .inner .back p {
-  width: 90%;
-  margin-top: 40px;
-  display: inline-block;
   color: #fff;
 }
 
-main .portofolio article .card .inner .back .fa-link {
-  font-size: 1.5rem;
+main .portofolio article .card .link {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 0 0 1rem 0;
 }
 
 section {
@@ -420,18 +334,18 @@ article {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   padding: 25px 0  25px 0;
 }
 
-article #left {
-  width: 60%;
+article #article {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -445,110 +359,12 @@ article #left {
           align-items: center;
 }
 
-article #left .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  width: 250px;
-  height: 320px;
-  overflow: hidden;
-  -webkit-box-shadow: 0 0 20px 0;
-          box-shadow: 0 0 20px 0;
-  border-radius: 20px;
-  opacity: 0.8;
-  -webkit-transition: -webkit-transform all ease-in-out;
-  transition: -webkit-transform all ease-in-out;
-  transition: transform all ease-in-out;
-  transition: transform all ease-in-out, -webkit-transform all ease-in-out;
+article #article .contact {
+  width: 30%;
 }
 
-article #left .box:hover {
-  opacity: 0.9;
-  -webkit-transition: all 1s ease-in-out;
-  transition: all 1s ease-in-out;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
-}
-
-article #left .box:hover .icons {
-  -webkit-transform: translateY(-140px);
-          transform: translateY(-140px);
-  -webkit-transition-duration: 1s;
-          transition-duration: 1s;
-  background-color: rgba(49, 46, 42, 0.712);
-}
-
-article #left .box .iconsBox {
-  color: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  text-align: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 2.3rem;
-  padding: 10px;
-  margin-top: 5px;
-}
-
-article #left .box .iconsBox a {
-  color: inherit;
-}
-
-article #left .box .iconsBox a:hover {
-  color: green;
-  -webkit-transform: scale(1.4);
-          transform: scale(1.4);
-}
-
-article #left .box .connect {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  color: #fff;
-  padding: 10px;
-  margin-left: 10px;
-}
-
-article #left .box .connect p {
-  margin: 5px;
-}
-
-article aside {
-  width: 40%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-article aside form {
-  width: 80%;
+article #article .contact form {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -572,7 +388,7 @@ article aside form {
   display: flex;
 }
 
-article aside form label {
+article #article .contact form label {
   background-color: #fff;
   z-index: 1;
   font-size: 18px;
@@ -581,7 +397,7 @@ article aside form label {
   margin: 0 0 -20px 0;
 }
 
-article aside form input {
+article #article .contact form input {
   cursor: pointer;
   height: 35px;
   width: 100%;
@@ -593,7 +409,7 @@ article aside form input {
   font-size: 1rem;
 }
 
-article aside form #message {
+article #article .contact form #message {
   cursor: pointer;
   background-color: #f1e8e8;
   width: 100%;
@@ -603,7 +419,7 @@ article aside form #message {
   border: none;
 }
 
-article aside form button {
+article #article .contact form button {
   border: none;
   outline: none;
   border-radius: 10px;
@@ -618,7 +434,7 @@ article aside form button {
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
-article aside form button:hover {
+article #article .contact form button:hover {
   -webkit-transform: scale(1.05);
           transform: scale(1.05);
 }
@@ -639,7 +455,18 @@ footer {
   letter-spacing: 1.5px;
 }
 
-@media (max-width: 764px) {
+@media (min-width: 770px) and (max-width: 1200px) {
+  main .portofolio {
+    width: 100%;
+    height: 100%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 770px) {
   * {
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
@@ -768,34 +595,17 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
     gap: 12px;
-    width: 90%;
+    width: 100%;
   }
   main .portofolio article {
     width: 100%;
   }
   main .portofolio article .card {
-    width: 100%;
+    width: 90%;
+    padding: 10px;
   }
-  main .portofolio article .card .inner {
-    width: 100%;
-  }
-  main .portofolio article .card .inner .back {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    gap: 30px;
-  }
-  main .portofolio article .card .inner .back .text {
-    text-align: center;
-    width: 100%;
-  }
-  main .portofolio article .card .inner .back i {
-    font-size: 30px;
+  main .portofolio article .card h3, main .portofolio article .card h4 {
+    padding: 1rem 0 1rem 1rem;
   }
   section {
     width: 100%;
@@ -824,21 +634,17 @@ footer {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  article #left {
-    width: 100%;
-    margin: 0 0 30px 0;
-  }
-  article #left .header {
-    padding: 20px;
-  }
-  article #left .header h2 {
-    padding: 10px;
-  }
-  article aside {
+  article #article {
     width: 100%;
   }
-  article aside textarea {
-    padding: 15px;
+  article #article .header {
+    margin: 0 0 2rem 0;
+  }
+  article #article .header h2 {
+    margin: 0 0 1rem 0;
+  }
+  article #article .contact {
+    width: 75%;
   }
   footer {
     width: 100%;
