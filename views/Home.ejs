@@ -26,14 +26,11 @@
                     <div class="about">
                         <button class="about-modal">About me!</button>
                     </div>
-                    <div class="about">
-                        <button class="about-modal" id="service" >Service</button>
-                    </div>
                 </div>
             </div>
             <div class="main2">
-                <div class="info">
-                    <div class="modal">
+                <div class="modal">
+                    <div class="info">
                         <div class="modal-header">
                             <h1>Hi there!</h1> 
                             <span class="close">X</span>
@@ -44,24 +41,7 @@
                                 I'm focus into front-end and back-end technologies, such MERN & and MEVN stack, 
                                 but not limited to others technologies. Also I like to build in plain vanilla Javascript.</p> 
                             <p>Through the years i was able to develop a passion for programming, 
-                                to make websites 100% functional and friendly for the user.  </p>
-                            
-                        </div>
-                    </div>
-                    <div class="modal" id="modal-service">
-                        <div class="modal-header">
-                            <h1>My services</h1> 
-                            <span class="close-service">X</span>
-                        </div>
-                        <div class="p-center">
-                            <ul>
-                                <li>Build and develop your website</li>
-                                <li>UI/UX Design</li>
-                                <li>Develop a responsive web content</li>
-                                <li>Optimize your existing website</li>
-                                <li>Provide your website with SEO best practices</li>
-                                <li>Make secure your web content</li>
-                            </ul> 
+                                to make websites 100% functional and friendly for the user.</p>
                         </div>
                     </div>
                 </div>
@@ -192,40 +172,27 @@
         const btnAbout = document.querySelector('.about-modal');
         const modal = document.querySelector('.modal');
         const closeAbout = document.querySelector('.close');
-        const main2 = document.querySelector('.main2');
-        const body = document.getElementsByName('body')
 
-        //service popup
-        const serviceBtn = document.getElementById('service');
-        const modalService = document.getElementById('modal-service');
-        const closeService = document.querySelector('.close-service')
+        // btnAbout.addEventListener('click', function() {
+        //     modal.style.display = 'block';
+        // })
 
-        serviceBtn.addEventListener('click', function(){
-            modal.style.display = 'none';
-            modalService.style.display = 'block';
-        })
-
-        closeService.addEventListener('click', function(){
-            modalService.style.display = 'none';
-        })
-
-        btnAbout.addEventListener('click', function() {
+        btnAbout.onclick = function(){
             modal.style.display = 'block';
-            modalService.style.display = 'none';
+        }
 
-        })
-
-        closeAbout.addEventListener('click', function(e){
+        closeAbout.onclick = function(){
             modal.style.display = 'none';
-        })
+        }
+
+        // closeAbout.addEventListener('click', function(e){
+        //     modal.style.display = 'none';
+        // })
 
         window.onclick = function(e){
-            
-            if(e.target === main2){
+            if (e.target == modal){
                 modal.style.display = 'none'
-            }
-            if (e.target === main2){
-                modalService.style.display = 'none'
+                
             }
         }
 

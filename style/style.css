@@ -23,6 +23,7 @@ header .main-container {
           flex-direction: row;
   padding-top: 50px;
   padding-bottom: 20px;
+  width: 100%;
   height: 80%;
 }
 
@@ -147,67 +148,44 @@ header .main-container .main2 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  z-index: 1;
   margin: 0;
 }
 
-header .main-container .main2 .info {
-  width: 50%;
-}
-
-header .main-container .main2 .info .modal {
-  width: 100%;
-  display: none;
-  font-size: large;
-  border-radius: 1.5rem;
-  -webkit-box-shadow: 0 0 20px 0;
-          box-shadow: 0 0 20px 0;
-  background-color: rgba(255, 255, 255, 0.945);
-  padding: 1.4rem;
-  text-align: center;
-}
-
-header .main-container .main2 .info .modal .p-center {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 100%;
-  margin: 0;
-}
-
-header .main-container .main2 .info .modal .p-center ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 5vh;
-  padding: 0;
+header .main-container .main2 .modal {
   width: 100%;
   height: 100%;
+  font-size: large;
   text-align: center;
-  -ms-flex-line-pack: center;
-      align-content: center;
+  position: fixed;
+  display: none;
+  z-index: 2;
 }
 
-header .main-container .main2 .info .modal .p-center ul li {
-  padding: 5px;
-  list-style-type: none;
+header .main-container .main2 .modal .info {
+  background-color: rgba(255, 255, 255, 0.945);
+  -webkit-box-shadow: 0 0 20px 0;
+          box-shadow: 0 0 20px 0;
+  border-radius: 1.5rem;
+  padding: 1.4rem;
+  width: 40%;
+  margin: auto;
 }
 
-header .main-container .main2 .info .modal .modal-header {
+header .main-container .main2 .modal .info .p-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+}
+
+header .main-container .main2 .modal .info .modal-header {
   width: 100%;
   margin-right: 0;
   display: -webkit-box;
@@ -219,11 +197,11 @@ header .main-container .main2 .info .modal .modal-header {
   text-align: center;
 }
 
-header .main-container .main2 .info .modal .modal-header h1 {
+header .main-container .main2 .modal .info .modal-header h1 {
   width: 96%;
 }
 
-header .main-container .main2 .info .modal .modal-header span {
+header .main-container .main2 .modal .info .modal-header span {
   width: 4%;
   margin-right: 0;
   font-size: x-large;
@@ -558,20 +536,17 @@ footer {
     width: 80%;
     height: 50%;
   }
-  header .main-container .main2 .info {
-    width: 100%;
-  }
-  header .main-container .main2 .info .modal .p-center {
+  header .main-container .main2 .modal .p-center {
     height: 100%;
   }
-  header .main-container .main2 .info .modal .p-center p {
+  header .main-container .main2 .modal .p-center p {
     padding: 10px;
     text-align: start;
   }
-  header .main-container .main2 .info .modal .p-center ul {
+  header .main-container .main2 .modal .p-center ul {
     margin-left: 25px;
   }
-  header .main-container .main2 .info .modal .p-center ul li {
+  header .main-container .main2 .modal .p-center ul li {
     text-align: start;
   }
   main {
