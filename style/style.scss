@@ -2,7 +2,11 @@ $primary: linear-gradient(to left top, green, rgb(145, 255, 0));
 $background: #333;
 $images: linear-gradient(to left top, green, rgba(53, 160, 21, 0.432) 60%);
 
-body{
+::-webkit-scrollbar{
+    display: none;
+}
+
+*{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -12,27 +16,38 @@ body{
 
 header{
     width: 100%;
+    height: 100vh;
+    background: url('../bg.jpeg') no-repeat center center fixed;
+    background-size: cover;
     .main-container{
-        background-image: $primary;
         display: flex;
         flex-direction: row;
-        padding-top: 50px;
-        padding-bottom: 20px;
-        width: 100%;
-        height: 80%;
+        justify-content: center;
+        
+        
         .main1{
-            width: 100%;
+            width: 80%;
             display: flex;
             flex-direction: row;
-            justify-content: space-evenly;
-            img{
+            justify-content: space-around;
+
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+    
+            
+            .img{
+                background: url('../img.jpg');
+            
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-position: center;
+                
+                width: 230px;
+                height: 300px;
                 border-radius: 70% 0 70% 0;
-                box-shadow: 0 0 20px 0;
-                opacity: 0.9;
-                &:hover{
-                    transition: 0.4s ease-in-out ;
-                    opacity: 1;
-                }
+                box-shadow: 0 0 20px 10px rgba(228, 224, 224, 0.404);
+        
             }
             .links {
                 width: 10%;
@@ -41,11 +56,10 @@ header{
                 justify-content: space-evenly;
                 a{color: inherit;}
                 i{
+                    color: #fff;
+                    border-radius: 10px;
                     cursor: pointer;
-                    text-align: center;
-                    padding-top: 20px;
-                    font-size: 3rem;
-                    word-spacing: 10px;
+                    font-size: 3.5rem;
                     &:hover{
                         transition: 0.44s ease-in-out;
                         transform: scale(1.3);
@@ -136,35 +150,44 @@ header{
 main{
     letter-spacing: 1.5px;
     width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+
+    .title{
+        margin-top: 3%;
+    }
 
     .portofolio{
         width: 100%;
-        height: 100%;
+        height: 100vh;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         article{
-            cursor: pointer;
             display: flex;
             align-items: center;
             overflow: hidden;
             .card{
                 width: 300px;
-                padding: 0 0 0 10px;
+                height: 200px;
+                padding: 0 0 0 15px;
                 background-image: $images;
-                border-radius: 20px;
+                border-radius: 10px;
                 h2{
                     text-align: center;
+                    padding: 10px 0 0 0;
                     color: #fff;
+                }
+                h3{
+                    padding: 10px 0 0 0; 
                 }
                 .link{
                     text-align: center;
                     font-size: 1.8rem;
-                    margin: 0 0 1rem 0;
+                    padding: 20px 0 0 0;
+                    
                 }
             }
         }

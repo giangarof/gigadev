@@ -1,4 +1,8 @@
-body {
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
@@ -9,11 +13,12 @@ body {
 
 header {
   width: 100%;
+  height: 100vh;
+  background: url("../bg.jpeg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 header .main-container {
-  background-image: -webkit-gradient(linear, right bottom, left top, from(green), to(#91ff00));
-  background-image: linear-gradient(to left top, green, #91ff00);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -21,14 +26,13 @@ header .main-container {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding-top: 50px;
-  padding-bottom: 20px;
-  width: 100%;
-  height: 80%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 header .main-container .main1 {
-  width: 100%;
+  width: 80%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -36,22 +40,24 @@ header .main-container .main1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
 }
 
-header .main-container .main1 img {
+header .main-container .main1 .img {
+  background: url("../img.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 230px;
+  height: 300px;
   border-radius: 70% 0 70% 0;
-  -webkit-box-shadow: 0 0 20px 0;
-          box-shadow: 0 0 20px 0;
-  opacity: 0.9;
-}
-
-header .main-container .main1 img:hover {
-  -webkit-transition: 0.4s ease-in-out;
-  transition: 0.4s ease-in-out;
-  opacity: 1;
+  -webkit-box-shadow: 0 0 20px 10px rgba(228, 224, 224, 0.404);
+          box-shadow: 0 0 20px 10px rgba(228, 224, 224, 0.404);
 }
 
 header .main-container .main1 .links {
@@ -73,11 +79,10 @@ header .main-container .main1 .links a {
 }
 
 header .main-container .main1 .links i {
+  color: #fff;
+  border-radius: 10px;
   cursor: pointer;
-  text-align: center;
-  padding-top: 20px;
-  font-size: 3rem;
-  word-spacing: 10px;
+  font-size: 3.5rem;
 }
 
 header .main-container .main1 .links i:hover {
@@ -212,6 +217,7 @@ header .main-container .main2 .modal .info .modal-header span {
 main {
   letter-spacing: 1.5px;
   width: 100%;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -225,12 +231,15 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 20px;
+}
+
+main .title {
+  margin-top: 3%;
 }
 
 main .portofolio {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -238,7 +247,6 @@ main .portofolio {
 }
 
 main .portofolio article {
-  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -250,21 +258,27 @@ main .portofolio article {
 
 main .portofolio article .card {
   width: 300px;
-  padding: 0 0 0 10px;
+  height: 200px;
+  padding: 0 0 0 15px;
   background-image: -webkit-gradient(linear, right bottom, left top, from(green), color-stop(60%, rgba(53, 160, 21, 0.432)));
   background-image: linear-gradient(to left top, green, rgba(53, 160, 21, 0.432) 60%);
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 main .portofolio article .card h2 {
   text-align: center;
+  padding: 10px 0 0 0;
   color: #fff;
+}
+
+main .portofolio article .card h3 {
+  padding: 10px 0 0 0;
 }
 
 main .portofolio article .card .link {
   text-align: center;
   font-size: 1.8rem;
-  margin: 0 0 1rem 0;
+  padding: 20px 0 0 0;
 }
 
 section {
